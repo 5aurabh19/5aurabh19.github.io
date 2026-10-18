@@ -6,6 +6,7 @@
 <title>Saurabh Shetty – AI/ML engineer in the making</title>
 <meta name="description" content="Saurabh Shetty is an AI & ML engineering student building LLM agents, RAG systems and recommenders.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 <style>
 :root{--bg:#f7f9fc;--bg2:#ffffff;--tx:#1d2733;--mut:#5b6b7e;--ac:#0b8f78;--bd:#dbe3ec;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a192f;--bg2:#112240;--tx:#ccd6f6;--mut:#8892b0;--ac:#64ffda;--bd:#233554;color-scheme:dark}}
@@ -63,22 +64,54 @@ h1 .name{background:linear-gradient(90deg,var(--tx),var(--ac));-webkit-backgroun
 .rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card{transition:none}}
+
+.skip{position:absolute;left:-999px;top:8px;background:var(--ac);color:var(--bg);padding:8px 14px;border-radius:6px;z-index:20;font-family:"JetBrains Mono",monospace;font-size:13px}
+.skip:focus{left:8px;text-decoration:none}
+.rail{position:fixed;bottom:0;display:none;flex-direction:column;align-items:center;gap:20px;z-index:4}
+.rail::after{content:"";width:1px;height:90px;background:var(--mut)}
+.rail.l{left:28px}.rail.r{right:28px}
+.rail a{color:var(--mut);display:block;transition:color .2s,transform .2s}
+.rail a:hover{color:var(--ac);transform:translateY(-3px);text-decoration:none}
+.rail svg{width:20px;height:20px;fill:currentColor;display:block}
+.rail .mail{writing-mode:vertical-rl;font-family:"JetBrains Mono",monospace;font-size:13px;letter-spacing:.08em}
+@media(min-width:1180px){.rail{display:flex}}
+.tabs{display:flex;gap:28px}
+.tablist{display:flex;flex-direction:column;min-width:210px;border-left:2px solid var(--bd);align-self:flex-start}
+.tablist button{all:unset;cursor:pointer;box-sizing:border-box;padding:11px 18px;margin-left:-2px;border-left:2px solid transparent;font-family:"JetBrains Mono",monospace;font-size:13.5px;color:var(--mut);transition:color .2s,background .2s}
+.tablist button:hover{color:var(--ac);background:color-mix(in srgb,var(--ac) 8%,transparent)}
+.tablist button[aria-selected="true"]{color:var(--ac);border-left-color:var(--ac);background:color-mix(in srgb,var(--ac) 8%,transparent)}
+.tablist button:focus-visible{outline:2px solid var(--ac)}
+.panel{flex:1;min-width:0}
+.panel h3{margin:0;font-size:19px;font-weight:500}.panel h3 em{font-style:normal;color:var(--ac)}
+.panel .mono{font-size:13px;margin:2px 0 10px}
+.panel ul{margin:0;padding-left:18px;color:var(--mut);font-size:15px}.panel li{margin:6px 0}
+.js .panel[hidden]{display:none}
+.panel:not([hidden]){animation:fade .35s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(max-width:680px){.tabs{flex-direction:column;gap:16px}.tablist{flex-direction:row;overflow-x:auto;min-width:0;border-left:0;border-bottom:2px solid var(--bd);align-self:stretch}.tablist button{white-space:nowrap;margin:0 0 -2px;border-left:0;border-bottom:2px solid transparent}.tablist button[aria-selected="true"]{border-bottom-color:var(--ac)}}
+.res{border:1px solid var(--ac);border-radius:6px;padding:5px 12px;color:var(--ac)}.res:hover{background:color-mix(in srgb,var(--ac) 12%,transparent);text-decoration:none}.btns{display:flex;flex-wrap:wrap;gap:14px}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="rail l" aria-label="Social links">
+<a href="https://github.com/5aurabh19" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+<a href="https://www.linkedin.com/in/saurabhshetty19" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+</div>
+<div class="rail r"><a class="mail" href="mailto:saurabhshetty005@gmail.com">saurabhshetty005@gmail.com</a></div>
 <header>
-<a class="logo" href="#top">SS</a>
+<a class="logo" href="#main" aria-label="Home">SS</a>
 <nav>
-<a class="hide" href="#about">About</a><a class="hide" href="#skills">Skills</a><a href="#projects">Projects</a><a class="hide" href="#education">Education</a><a href="#contact">Contact</a>
+<a class="hide" href="#about">About</a><a class="hide" href="#skills">Skills</a><a href="#projects">Projects</a><a class="hide" href="#education">Education</a><a href="#contact">Contact</a><a class="res" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
 </nav>
 </header>
-<main id="top">
+<main id="main">
 <section class="hero">
 <span class="chip mono">Open to internships &amp; collaborations</span>
 <p class="mono">Hi, my name is</p>
 <h1><span class="name" style="-webkit-text-fill-color:transparent">Saurabh Shetty.</span><br><span>I build things with LLMs.</span></h1>
 <p class="lead">I’m an AI &amp; Machine Learning engineering student who enjoys building agents, retrieval systems and recommenders, mostly to see how far a few well-chained ideas can go.</p>
-<div><a class="btn" href="#contact">Get in touch</a></div>
+<div class="btns"><a class="btn" href="#contact">Get in touch</a><a class="btn" href="resume.pdf" target="_blank" rel="noopener">View resume</a></div>
 </section>
 
 <section id="about">
@@ -151,18 +184,25 @@ h1 .name{background:linear-gradient(90deg,var(--tx),var(--ac));-webkit-backgroun
 
 <section id="education">
 <h2><span class="n">04.</span> Where I’ve studied &amp; learned</h2>
-<div class="item">
-<div class="row"><h3>@Dayananda Sagar College of Engineering</h3><span class="mono">2023 – 2027</span></div>
-<p class="mono">B.E. in Artificial Intelligence &amp; Machine Learning · Bengaluru</p>
+<div class="tabs">
+<div class="tablist" role="tablist" aria-label="Education and experience">
+<button role="tab" id="t0" aria-controls="p0" aria-selected="true">DSCE</button>
+<button role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1">Mudita</button>
+<button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Certifications</button>
+</div>
+<div class="panel" role="tabpanel" id="p0" aria-labelledby="t0">
+<h3>B.E. in AI &amp; ML <em>@ Dayananda Sagar College of Engineering</em></h3>
+<p class="mono">2023 – 2027 · Bengaluru</p>
 <ul><li>Coursework: Data Structures &amp; Algorithms, Machine Learning, Deep Learning, Computer Vision, NLP, DBMS, Operating Systems, Computer Networks</li></ul>
 </div>
-<div class="item">
-<div class="row"><h3>@Mudita</h3><span class="mono">Sep 2024 – Dec 2025</span></div>
-<p class="mono">Social Media Team Member</p>
+<div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+<h3>Social Media Team Member <em>@ Mudita</em></h3>
+<p class="mono">Sep 2024 – Dec 2025</p>
 <ul><li>Planned and executed the club’s social media content strategy</li><li>Created posts and reels that grew audience engagement across campaigns</li></ul>
 </div>
-<div class="item">
-<div class="row"><h3>Certifications</h3></div>
+<div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+<h3>Certifications</h3>
+<p class="mono">Courses &amp; credentials</p>
 <ul>
 <li>NPTEL, Introduction to Industry 4.0 and Industrial IoT, IIT Kharagpur (2026)</li>
 <li>Kaggle, Advanced SQL</li>
@@ -171,6 +211,7 @@ h1 .name{background:linear-gradient(90deg,var(--tx),var(--ac));-webkit-backgroun
 <li>Certificate of Excellence, Java: Mastering the Fundamentals</li>
 <li>Maharashtra State Certificate in Information Technology (MS-CIT)</li>
 </ul>
+</div>
 </div>
 </section>
 
@@ -185,16 +226,19 @@ h1 .name{background:linear-gradient(90deg,var(--tx),var(--ac));-webkit-backgroun
 </div>
 </section>
 </main>
-<footer>Designed &amp; built by Saurabh Shetty</footer>
+<footer>Designed &amp; built by Saurabh Shetty · <a href="https://github.com/5aurabh19/5aurabh19.github.io" rel="noopener">Source code of this website</a></footer>
 <script>
 (function(){
-var els=document.querySelectorAll(".card,.item,.hero>*,h2");
+var els=document.querySelectorAll(".card,.hero>*,h2");
 els.forEach(function(e){e.classList.add("rv")});
 if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.1});
 els.forEach(function(e){io.observe(e)});
 var links=document.querySelectorAll("nav a"),secs=[].slice.call(document.querySelectorAll("main section[id]"));
 addEventListener("scroll",function(){var y=scrollY+120,cur="";secs.forEach(function(s){if(s.offsetTop<=y)cur=s.id});links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+cur)})},{passive:true});
+var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+function pick(t,f){tabs.forEach(function(b){var on=b===t;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute("aria-controls")).hidden=!on});if(f)t.focus()}
+tabs.forEach(function(b,i){b.addEventListener("click",function(){pick(b)});b.addEventListener("keydown",function(e){var d={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];if(d){e.preventDefault();pick(tabs[(i+d+tabs.length)%tabs.length],true)}})});
 })();
 </script>
 </body>
